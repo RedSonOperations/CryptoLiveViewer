@@ -69,7 +69,7 @@ app.post("/", function(req, res){
     });
 })
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     var url="http://localhost:3000/"
     console.log("App listening on port 3000: "+url);
 })
