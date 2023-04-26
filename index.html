@@ -63,7 +63,8 @@
     <h2><em>A fun side project by Alec Kain using the min-api CryptoCompare API.</em></h2>
     <form action="/" method="post">
         <label for="cryptoCurr">Select a cryptocurrency to view its current value:</label>
-        <select name="cryptoCurr" id="cryptoCurr" aria-placeholder="Select a crypto:">
+        <select name="cryptoCurr" id="cryptoCurr">
+            <option disabled selected value="">-- Select a crypto --</option>
             <option value="BTC">BTC</option>
             <option value="ETH">ETH</option>
             <option value="USDT">USDT</option>
@@ -82,13 +83,14 @@
         <br>
         <label for="currency">Select a world currency:</label>
         <select name="currency" id="currency">
+            <option disabled selected value="">-- Select a currency --</option>
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
             <option value="JPY">JPY</option>
             <option value="USD,EUR,JPY">ALL</option>
         </select>
         <br>
-        <button type="submit" name="submit">Update value</button>
+        <button type="submit" name="submit">View</button>
     </form>
 </body>
 </html>
