@@ -62,11 +62,18 @@ app.post("/", function(req, res){
                 res.write("<p>The current Japanese Yen value of "+ticker+" is <span style='color: #00BFFF;'>\xA5"+cryptoJPY+"</span></p>");
             }
             res.write("</div>");
+            res.write("<form action='/return' method='POST'>");
+            res.write("<button type='submit' class='btn btn-lg btn-primary btn-block'>Return to Home</button>");
+            res.write("</form>");
             res.write("</body>");
             res.write("</html>");
             res.send();
         })
     });
+})
+
+app.post("/return", function(req, res){
+    res.redirect("https://crypto-live-viewer.onrender.com");
 })
 
 app.listen(process.env.PORT || 3000, function(){
